@@ -1,81 +1,176 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kumar Subrato — Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="Personal profile and professional portfolio of Kumar Subrato.">
+  <title>Kumar Subrato | Personal Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="assets/avatar.svg" alt="avatar" class="avatar" id="photo">
-        <div>
-          <h1 id="name">Your Name</h1>
-          <p id="title">Developer • Designer</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+  <header class="site-header" id="home">
+    <div class="header-inner">
+      <a class="wordmark" href="#home" aria-label="Back to home">
+        <span class="wordmark-name" id="header-name">Kumar Subrato</span>
+        <span class="wordmark-note" id="header-tagline">Personal profile</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#personal">Personal</a>
+        <a href="#family">Family</a>
+        <a href="#career">Career</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#professional">Professional</a>
+        <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h2 id="hero-title">Hi — I'm <span id="hero-name">Your Name</span></h2>
-        <p id="hero-sub">A short one-line description about you that matches your Stitch design.</p>
-        <div class="cta">
-          <a id="cta-1" class="btn" href="#contact">Contact</a>
-          <a id="cta-2" class="btn ghost" href="#projects">My Work</a>
+    <section class="profile-section section-wrap" aria-labelledby="profile-name">
+      <div class="profile-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span id="profile-location">Your location</span></p>
+        <h1 id="profile-name">Kumar Subrato</h1>
+        <p class="profile-role" id="profile-role">Your professional title</p>
+        <p class="profile-intro" id="profile-intro">A little about me, my work, and the things I care about. This space is ready for your introduction.</p>
+        <div class="profile-links" id="social-links" aria-label="Social links"></div>
+      </div>
+      <figure class="profile-portrait">
+        <img id="profile-photo" src="assets/avatar.svg" alt="Profile photo placeholder" fetchpriority="high">
+        <figcaption id="portrait-caption">A little more about me</figcaption>
+      </figure>
+    </section>
+
+    <div class="action-grid section-wrap" aria-label="Quick links">
+      <a class="action-link contact-action" href="#contact">
+        <span class="action-index">01 / SAY HELLO</span>
+        <span class="action-title">Contact</span>
+        <span class="action-detail">Email, social links and more</span>
+        <span class="action-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="action-link gallery-action" href="#gallery">
+        <span class="action-index">02 / MOMENTS</span>
+        <span class="action-title">Gallery</span>
+        <span class="action-detail">A few scenes from my life</span>
+        <span class="action-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <section class="content-section section-wrap" id="personal">
+      <div class="section-heading">
+        <p class="eyebrow">A few things about me</p>
+        <h2>Personal details</h2>
+      </div>
+      <dl class="detail-list" id="personal-details"></dl>
+    </section>
+
+    <section class="content-section section-wrap" id="family">
+      <div class="section-heading">
+        <p class="eyebrow">The people closest to me</p>
+        <h2>Family</h2>
+      </div>
+      <div class="family-list" id="family-list"></div>
+    </section>
+
+    <section class="content-section section-wrap" id="career">
+      <div class="section-heading">
+        <p class="eyebrow">How my work has grown</p>
+        <h2>Career journey</h2>
+      </div>
+      <div class="timeline" id="career-timeline"></div>
+    </section>
+
+    <section class="content-section section-wrap" id="achievements">
+      <div class="section-heading">
+        <p class="eyebrow">Milestones worth remembering</p>
+        <h2>Achievements</h2>
+      </div>
+      <div class="achievement-list" id="achievement-list"></div>
+    </section>
+
+    <section class="content-section section-wrap" id="professional">
+      <div class="section-heading">
+        <p class="eyebrow">What I do and how I do it</p>
+        <h2>Professional profile</h2>
+      </div>
+      <div class="professional-summary" id="professional-summary"></div>
+      <div class="subsection">
+        <h3>Areas of expertise</h3>
+        <div class="skill-groups" id="skill-groups"></div>
+      </div>
+      <div class="subsection">
+        <div class="subsection-heading">
+          <h3>Selected projects</h3>
+          <span class="muted-label">A selection of my work</span>
         </div>
+        <div class="project-list" id="project-list"></div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h3>About</h3>
-        <p id="about-text">A concise bio goes here. Edit the `data.js` file to update this text easily.</p>
+    <section class="content-section section-wrap" id="hobbies">
+      <div class="section-heading">
+        <p class="eyebrow">Outside of work</p>
+        <h2>Things I enjoy</h2>
       </div>
+      <ul class="hobby-list" id="hobby-list"></ul>
     </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h3>Skills</h3>
-        <ul class="skills" id="skills-list"></ul>
+    <section class="content-section section-wrap" id="gallery">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">A few scenes from my life</p>
+          <h2>Photo gallery</h2>
+        </div>
+        <p class="gallery-note">Select a photo to view it larger.</p>
       </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h3>Projects</h3>
-        <div class="projects-grid" id="projects-list"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h3>Contact</h3>
-        <p id="contact-text">Email: <a id="email-link" href="mailto:you@example.com">you@example.com</a></p>
+    <section class="contact-section" id="contact">
+      <div class="section-wrap contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">Have a question or an idea?</p>
+          <h2>Let's connect.</h2>
+          <p class="contact-intro">I'm always glad to hear from thoughtful people. Reach me through any of these channels.</p>
+          <dl class="contact-list" id="contact-list"></dl>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label for="sender-name">Your name</label>
+          <input id="sender-name" name="name" autocomplete="name" required>
+          <label for="sender-email">Your email</label>
+          <input id="sender-email" name="email" type="email" autocomplete="email" required>
+          <label for="sender-message">Message</label>
+          <textarea id="sender-message" name="message" rows="4" required></textarea>
+          <button class="submit-button" type="submit">Open email <span aria-hidden="true">↗</span></button>
+          <p class="form-note" id="form-note">Your email app will open to send the message.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="footer-name">Your Name</span></small>
-    </div>
+  <footer class="site-footer section-wrap">
+    <span>© <span id="footer-year"></span> <span id="footer-name">Kumar Subrato</span></span>
+    <a href="#home">Back to top ↑</a>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo viewer">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">←</button>
+    <figure>
+      <img id="lightbox-image" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">→</button>
+  </dialog>
 </body>
 </html>

@@ -1,14 +1,47 @@
-/* Edit this file to update your personal info quickly */
+// Edit these values to personalize the site. Empty lists keep the page free of invented details.
 const data = {
   name: "Kumar Subrato",
-  title: "Frontend Developer",
-  heroSubtitle: "I build clean, responsive web experiences.",
-  about: "This is a placeholder bio — replace with your Stitch content. Keep it concise and focused on what you do.",
-  photo: "assets/avatar.svg",
-  skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design"],
-  projects: [
-    { title: "Project One", description: "Short summary of project one.", url: "#" },
-    { title: "Project Two", description: "Short summary of project two.", url: "#" }
+  tagline: "Personal profile",
+  title: "Your professional title",
+  introduction: "A little about me, my work, and the things I care about. This space is ready for your introduction.",
+  location: "",
+  portraitCaption: "A little more about me",
+  photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=82",
+  personal: [
+    { label: "Full name", value: "Kumar Subrato" },
+    { label: "Location", value: "" },
+    { label: "Current city", value: "" },
+    { label: "Education", value: "" },
+    { label: "Languages", value: "" }
   ],
-  contact: { email: "you@example.com", linkedin: "#" }
+  family: [],
+  career: [],
+  achievements: [],
+  professional: {
+    designation: "",
+    organization: "",
+    experience: "",
+    expertise: "",
+    futureDirection: ""
+  },
+  skills: [],
+  projects: [],
+  hobbies: [],
+  social: [],
+  contact: {
+    email: "",
+    phone: "",
+    linkedin: "",
+    github: "",
+    location: ""
+  },
+  // These are sample photos only. Replace with your own image URLs or files when ready.
+  gallery: [
+    { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=78", alt: "Open landscape at sunset", caption: "Travel" },
+    { src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=78", alt: "Portrait in natural light", caption: "Portrait" },
+    { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1100&q=78", alt: "Mountain lake and forest", caption: "A quiet place" },
+    { src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=78", alt: "Hills beneath a wide sky", caption: "Outdoors" },
+    { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=78", alt: "Mountain range reflected in a lake", caption: "On the road" },
+    { src: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=700&q=78", alt: "Sunlight over a calm landscape", caption: "Golden hour" }
+  ]
 };
