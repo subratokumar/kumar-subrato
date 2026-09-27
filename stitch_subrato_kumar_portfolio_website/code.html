@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#191c22", "on-background": "#191c22", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b8c4fb", "tertiary-fixed-dim": "#ffb866", "surface-variant": "#e0e2eb", "error-container": "#ffdad6", "error": "#ba1a1a", "surface": "#f9f9ff", "on-secondary-fixed-variant": "#822801", "surface-container": "#ecedf7", "on-error": "#ffffff", "tertiary-container": "#442700", "background": "#f9f9ff", "surface-container-low": "#f2f3fd", "tertiary-fixed": "#ffddba", "surface-dim": "#d8dae3", "inverse-primary": "#b8c4fb", "secondary-fixed": "#ffdbcf", "primary": "#061542", "on-secondary-fixed": "#390c00", "secondary-fixed-dim": "#ffb59c", "secondary-container": "#fe8357", "surface-container-lowest": "#ffffff", "outline-variant": "#c6c5d0", "outline": "#767680", "on-secondary-container": "#6f2000", "on-error-container": "#93000a", "on-primary-container": "#8793c7", "surface-container-high": "#e6e8f1", "on-tertiary-container": "#ca872f", "on-tertiary-fixed-variant": "#673d00", "surface-bright": "#f9f9ff", "primary-fixed": "#dce1ff", "on-secondary": "#ffffff", "tertiary": "#281500", "on-primary": "#ffffff", "on-primary-fixed-variant": "#384473", "inverse-surface": "#2d3037", "on-tertiary-fixed": "#2b1700", "on-primary-fixed": "#091845", "secondary": "#a23e18", "surface-container-highest": "#e0e2eb", "surface-tint": "#505c8c", "primary-container": "#1e2b58", "inverse-on-surface": "#eff0fa", "on-surface-variant": "#45464f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "space-lg": "1.75rem", "space-md": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem" }, "fontFamily": { "headline-sm": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-display": ["Playfair Display"], "headline-display-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500"}], "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "headline-display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between h-14"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm select-none">SK</div><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight leading-none">Subrato Kumar</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-none mt-1">Subrato Portfolio</span></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-1" src="https://lh3.googleusercontent.com/aida/AEtjO1WIXhcR3sboDNsjxZD8kz_5Py5x04uIwlMP9o_I1K3PR-jc6a2lTgSBVzZsx6is0NduJrBQMam8MjPjONZbUPVdHXMSl2saxu76qbdx4WXpxr2Wn9ndGT80tdsnAR_1tqoh2fcZ34zezoanksGvfbTrsTq0HapNsvqxx5Dicgi9lm7J4hjkSOpLo0_thCreI5mejHeQlzDYgAgu_olpM0Pam8Ey743JfddLyDMLOMhOdt7cKE1xY_QLmU4"/></div></div><nav class="flex items-center gap-space-md overflow-x-auto no-scrollbar h-10 px-space-xs" data-active-classes="text-secondary font-label-md"><a aria-current="page" class="whitespace-nowrap transition-colors py-space-xs text-secondary font-label-md" data-path="subrato-portfolio" href="#about">About</a><a aria-current="page" class="whitespace-nowrap transition-colors py-space-xs text-secondary font-label-md" data-path="subrato-portfolio" href="#career">Career</a><a aria-current="page" class="whitespace-nowrap transition-colors py-space-xs text-secondary font-label-md" data-path="subrato-portfolio" href="#expertise">Expertise</a><a aria-current="page" class="whitespace-nowrap transition-colors py-space-xs text-secondary font-label-md" data-path="subrato-portfolio" href="#gallery">Gallery</a><a aria-current="page" class="whitespace-nowrap transition-colors py-space-xs text-secondary font-label-md" data-path="subrato-portfolio" href="#contact">Contact</a></nav></div></header><main class="flex flex-col relative w-full bg-surface pt-28 pb-safe"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md" id="about">
+<!-- Status & Welcome Pills -->
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        Hello, I'm
+      </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        Open for Roles / Advisory
+      </div>
+</div>
+<!-- Title & Tagline -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-display-mobile text-headline-display-mobile text-primary tracking-tight">Subrato Kumar</h1>
+<p class="font-title-md text-title-md text-secondary leading-snug">AI &amp; Data Strategist · Building Intelligent Systems &amp; Scalable Solutions</p>
+</div>
+<!-- Portrait Card & Location Chip -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-md">
+<img alt="Subrato Kumar Portrait" class="w-full h-80 object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1WIXhcR3sboDNsjxZD8kz_5Py5x04uIwlMP9o_I1K3PR-jc6a2lTgSBVzZsx6is0NduJrBQMam8MjPjONZbUPVdHXMSl2saxu76qbdx4WXpxr2Wn9ndGT80tdsnAR_1tqoh2fcZ34zezoanksGvfbTrsTq0HapNsvqxx5Dicgi9lm7J4hjkSOpLo0_thCreI5mejHeQlzDYgAgu_olpM0Pam8Ey743JfddLyDMLOMhOdt7cKE1xY_QLmU4"/>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface/90 backdrop-blur-md text-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+        Bangalore / Global Remote
+      </div>
+</div>
+<!-- Punchy Bio -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Passionate technologist driving impact at the intersection of Agentic AI, modern data engineering, and human-centric products. Crafting architecture that transforms raw complexity into serene computational value.
+    </p>
+<!-- CTAs -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="flex-1 py-3 px-5 rounded-lg bg-primary text-on-primary font-title-md text-title-md text-center shadow-md active:scale-[0.98] transition-transform" href="#contact">
+        Get in Touch
+      </a>
+<a class="flex-1 py-3 px-4 rounded-lg bg-surface-container-high text-primary font-title-md text-title-md text-center active:scale-[0.98] transition-transform flex items-center justify-center gap-1.5" href="#contact">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Resume
+      </a>
+</div>
+<!-- Social Link Pills -->
+<div class="flex items-center gap-space-xs pt-space-xs overflow-x-auto no-scrollbar">
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">share</span>
+        LinkedIn
+      </a>
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" href="https://github.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">terminal</span>
+        GitHub
+      </a>
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" href="#contact">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+        Email
+      </a>
+</div>
+</section>
+<!-- SECTION 2: ABOUT & IDENTITY -->
+<section class="px-gutter-mobile py-space-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">About Me</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Engineering Rigor &amp; Product Empathy</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      With over 8 years of hands-on engineering, I bridge deep technical foundation with high-level systemic strategy. From architecting distributed streaming fabrics to orchestrating multi-agent systems, my craft centers on durability, intentional design, and measurable enterprise value.
+    </p>
+<!-- 4 Stats / Focus Chips -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">history_edu</span>
+<span class="font-title-md text-title-md text-primary font-bold">8+ Years</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Building Production Systems</span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">hub</span>
+<span class="font-title-md text-title-md text-primary font-bold">Agentic AI</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">&amp; Scalable Data Lakehouses</span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">menu_book</span>
+<span class="font-title-md text-title-md text-primary font-bold">Perpetual</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Continuous Learner &amp; Reader</span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">explore</span>
+<span class="font-title-md text-title-md text-primary font-bold">Beyond Code</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Travel &amp; Photography</span>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CAREER TIMELINE -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="career">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Milestones</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Career Journey</h2>
+</div>
+<!-- Vertical Timeline -->
+<div class="relative pl-6 flex flex-col gap-space-md">
+<!-- Continuous subtle vertical stem using colored div, not border -->
+<div class="absolute left-2 top-2 bottom-2 w-0.5 bg-surface-variant rounded-full"></div>
+<!-- Milestone 1 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-secondary shadow-sm"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2023 — Present</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 rounded-full bg-surface-container">Lead Role</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Lead AI &amp; Data Architect</h3>
+<p class="font-title-md text-title-md text-on-surface">Frontier Innovations Lab</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 leading-relaxed">
+          Spearheading enterprise generative AI architectures, autonomous multi-agent pipelines, and contextual retrieval-augmented generation (RAG) at scale.
+        </p>
+</div>
+<!-- Milestone 2 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-primary shadow-sm"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2020 — 2023</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 rounded-full bg-surface-container">Staff Track</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Senior Data &amp; Systems Engineer</h3>
+<p class="font-title-md text-title-md text-on-surface">Apex Cloud Technologies</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 leading-relaxed">
+          Architected high-throughput real-time event streaming engines and optimized multi-cloud data infrastructure serving millions of daily operations.
+        </p>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-surface-dim shadow-sm"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2017 — 2020</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 rounded-full bg-surface-container">Foundational</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Full-Stack &amp; Data Engineer</h3>
+<p class="font-title-md text-title-md text-on-surface">Catalyst Digital</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 leading-relaxed">
+          Engineered responsive analytical web tools, RESTful pipelines, and automated reporting frameworks for fast-scaling enterprise clients.
+        </p>
+</div>
+</div>
+<!-- Education Note -->
+<div class="mt-space-xs p-4 rounded-xl bg-surface-container-high flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary font-bold">B.Tech in Computer Science &amp; Engineering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Graduated with Distinction · Foundational Rigor</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CAPABILITIES / EXPERTISE -->
+<section class="px-gutter-mobile py-space-lg bg-surface-container-low flex flex-col gap-space-md" id="expertise">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Domain Focus</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Capabilities &amp; Craft</h2>
+</div>
+<!-- Cards Grid -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1 -->
+<div class="p-4 rounded-xl bg-surface shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">AI &amp; Generative AI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Multi-modal foundational models, deliberate prompting frameworks, contextual vector search, and production RAG topologies.
+        </p>
+</div>
+<!-- Card 2 -->
+<div class="p-4 rounded-xl bg-surface shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Agentic AI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Autonomous workflow orchestration, multi-agent cooperative networks, deterministic tool-calling, and enterprise safety guardrails.
+        </p>
+</div>
+<!-- Card 3 -->
+<div class="p-4 rounded-xl bg-surface shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">dataset</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Data Engineering &amp; Science</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Real-time lakehouse architectures, distributed event streaming, feature store construction, and predictive modeling pipelines.
+        </p>
+</div>
+<!-- Card 4 -->
+<div class="p-4 rounded-xl bg-surface shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Full-Stack &amp; Cloud</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Modern reactive user interfaces, microservices, containerization, serverless computing, and resilient cloud-native infrastructure.
+        </p>
+</div>
+</div>
+<!-- Certifications Row -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Industry Certifications</span>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1.5 rounded-full bg-surface text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          AWS Solutions Architect
+        </div>
+<div class="px-3 py-1.5 rounded-full bg-surface text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          GCP Professional Data Engineer
+        </div>
+<div class="px-3 py-1.5 rounded-full bg-surface text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          DeepLearning.AI Fellow
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: MOMENTS & BEYOND WORK -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md" id="gallery">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Life &amp; Perspectives</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Moments &amp; Beyond Work</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      A life in balance: finding clarity in alpine trails, artisanal coffee notes, thoughtful reading, and giving back to budding tech communities.
+    </p>
+<!-- 2-Column Photo Vignette Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Vignette 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-44 rounded-xl overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Breathtaking wide view of majestic alpine Himalayan mountain trail with golden hour sun reflecting on snow caps, crisp clear atmosphere, minimalist outdoor photography with warm tones and deep sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD9sm80WVSwlfc10Cdg9VVWNt9GlB_g3g-SObB4xjB3HX3gavxGAuM-tdNxD-zVXIproMKVxhiAs_N30dhtgE2VqZVnVJZP4aTysltvytquYD4N52AeC7bnu63nIT0heJ505pZDBDr4dzXdfdJrcKNX_EwDIcTbPzygcxf3p9CEqoids4C5hGvWIMzZH78XMpgncNoR8wzvbVHkBsorKzmBRhxldiCuXCCdVPO0QwQmsbPrDxpSFf1"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">High Pass Trek</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Trekking &amp; Travel</span>
+<span class="font-label-sm text-label-sm text-secondary">14+ Nations Explored</span>
+</div>
+<!-- Vignette 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-44 rounded-xl overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Aesthetic artisanal pour-over specialty coffee setup on warm minimalist oak table, handcrafted ceramic mug with warm crema, morning sunlight streaming through sheer curtains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZLS1NLdJ5zuGCQ89dIsnUa2Mnd7oq3A5y0ZVAOv0IGc4Ntk-vOYlsbDWS_ZF07lwAjDQ8Zx-iskfllOLhDpOPjpdMRBBtg1X3D_hkuugCmQnuTjcbGF8OOGViAAFShm9rc6VjS083rbGlieetgJpj3V6WA3tP9J9JD_7ChsRjkvl_Q1ccUzilbe0GzcovQXn23lwBw9_fGwYjR3xFSArN-lyaacJSi6R3ZagLVr4cR0JxTIZsgivD"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">Single Origin</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Specialty Coffee</span>
+<span class="font-label-sm text-label-sm text-secondary">V60 &amp; AeroPress Rituals</span>
+</div>
+<!-- Vignette 3 -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-44 rounded-xl overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Subrato speaking passionately at a modern tech conference stage with ambient warm blue and amber stage lighting, professional presentation backdrop, attentive audience silhouettes in foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyUMgOn5OY2EDOr7qPh-WudFWgioWoufz2PAdLyC7lYpdkxQd2p2Mxo-UTbBu-oYjauRgxnVVAFq1QKBcyf9586qq1iYLh30uogK9pUFtYpc6kxKworNYzU771IAuF-wG2FUKF7yPFXYzTa7_XoPzDyeGxNhZz47cLcnjvMUWb8mclWv7rJAdtu6HAngTbx4OYDR19Hhkq4VXRm78A8ZhXTp9uygfp1RR8wBrWlBc-l28LhnMiuCoW"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">Keynote 2024</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Mentorship &amp; Talks</span>
+<span class="font-label-sm text-label-sm text-secondary">Community Advocacy</span>
+</div>
+<!-- Vignette 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="w-full h-44 rounded-xl overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cozy reading nook with stack of well-loved books on technology philosophy and human architecture, warm amber table lamp glow, neat notebook and luxury pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXjDRDJ8cw6oShhyQAkcTjWZhXr0nXjKr5FhL8QZvId6ULS7szOxVEb8CRAaTvO2ehrV6Kr99FdNDEflxe13hB6hMlEBmeoMq1X5XzefyyZUCmG1-ZPzBMH0QapMcxFPT6zfBPxnuhlzDzQR2OAe8Fvrx6uFZ9O4hPtX6066P4pzJVTNAhdTmLyGeo9swKZLP_3ebndaVgjQXDxoltpbi6vEAka-BdGPtxcJytuEBGDw6QuKIAApx0"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-sm text-primary font-label-sm text-label-sm">Deep Reading</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Continuous Reading</span>
+<span class="font-label-sm text-label-sm text-secondary">Philosophy &amp; Systems</span>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CONTACT -->
+<section class="px-gutter-mobile py-space-lg bg-surface-container-low flex flex-col gap-space-md" id="contact">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Start A Dialogue</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Let's Connect</h2>
+</div>
+<!-- Direct Email Card with Interactive Copy -->
+<div class="p-4 rounded-xl bg-surface flex flex-col gap-3 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Direct Inbox</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Quick Response</span>
+</div>
+<div class="flex items-center justify-between gap-2 p-2.5 rounded-lg bg-surface-container-low">
+<span class="font-title-md text-title-md text-primary truncate select-all" id="emailText">subrato.kumar@example.com</span>
+<button class="px-3 py-1.5 rounded-md bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform flex-shrink-0" id="copyBtn" type="button">
+<span class="material-symbols-outlined text-[15px]" id="copyIcon">content_copy</span>
+<span id="copyLabel">Copy</span>
+</button>
+</div>
+<!-- Quick Social Icons -->
+<div class="flex items-center justify-start gap-space-sm pt-1">
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://github.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" href="https://x.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+<!-- Direct Message Form -->
+<form class="p-4 rounded-xl bg-surface shadow-sm flex flex-col gap-space-sm" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('sentAlert').classList.remove('hidden'); this.reset();">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="name">Your Name</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-0 focus:bg-surface-container transition-colors" id="name" placeholder="Subrato's Guest" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="senderEmail">Email Address</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-0 focus:bg-surface-container transition-colors" id="senderEmail" placeholder="name@organization.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="msg">Note / Inquiry</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-0 focus:bg-surface-container resize-none transition-colors" id="msg" placeholder="Tell me about your architectural challenge, advisory need, or project..." required="" rows="3"></textarea>
+</div>
+<button class="w-full py-3 px-4 rounded-lg bg-primary text-on-primary font-title-md text-title-md font-semibold text-center flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform shadow-md" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+        Send Message
+      </button>
+<!-- Sent feedback -->
+<div class="hidden p-3 rounded-lg bg-secondary-container/20 text-on-secondary-container text-body-sm font-body-sm flex items-center gap-2" id="sentAlert">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+        Thank you! Your note has been delivered.
+      </div>
+</form>
+</section>
+<!-- FOOTER -->
+<footer class="px-gutter-mobile py-space-lg text-center flex flex-col items-center gap-1">
+<p class="font-label-md text-label-md text-on-surface-variant">
+      Crafted with care for <span class="font-semibold text-primary">Subrato Kumar</span>
+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70">
+      Ready for GitHub Pages &amp; Vercel Deployment · © 2025
+    </p>
+</footer>
+<!-- Micro-interaction JS for Copy to Clipboard -->
+<script>
+    const copyBtn = document.getElementById('copyBtn');
+    const copyLabel = document.getElementById('copyLabel');
+    const copyIcon = document.getElementById('copyIcon');
+    const emailText = document.getElementById('emailText');
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(emailText.innerText).then(() => {
+          copyLabel.innerText = 'Copied!';
+          copyIcon.innerText = 'done';
+          setTimeout(() => {
+            copyLabel.innerText = 'Copy';
+            copyIcon.innerText = 'content_copy';
+          }, 2000);
+        }).catch(() => {
+          copyLabel.innerText = 'Copied!';
+          setTimeout(() => {
+            copyLabel.innerText = 'Copy';
+          }, 2000);
+        });
+      });
+    }
+  </script>
+</div></main></body></html>

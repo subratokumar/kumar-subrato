@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kumar Subrato — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/avatar.svg" alt="avatar" class="avatar" id="photo">
+        <div>
+          <h1 id="name">Your Name</h1>
+          <p id="title">Developer • Designer</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2 id="hero-title">Hi — I'm <span id="hero-name">Your Name</span></h2>
+        <p id="hero-sub">A short one-line description about you that matches your Stitch design.</p>
+        <div class="cta">
+          <a id="cta-1" class="btn" href="#contact">Contact</a>
+          <a id="cta-2" class="btn ghost" href="#projects">My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h3>About</h3>
+        <p id="about-text">A concise bio goes here. Edit the `data.js` file to update this text easily.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h3>Skills</h3>
+        <ul class="skills" id="skills-list"></ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h3>Projects</h3>
+        <div class="projects-grid" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h3>Contact</h3>
+        <p id="contact-text">Email: <a id="email-link" href="mailto:you@example.com">you@example.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="footer-name">Your Name</span></small>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
