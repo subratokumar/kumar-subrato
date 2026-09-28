@@ -10,20 +10,24 @@ const emptyState = (container, message) => container.append(make("p", "empty-not
 
 function renderDetails() {
   const personal = byId("personal-details");
-  data.personal.filter((item) => item.value).forEach((item) => {
-    const row = make("div", "detail-row");
-    row.append(make("dt", "", item.label), make("dd", "", item.value));
-    personal.append(row);
-  });
-  if (!personal.children.length) emptyState(personal, "Add the personal details you would like to share in data.js.");
+  if (personal) {
+    data.personal.filter((item) => item.value).forEach((item) => {
+      const row = make("div", "detail-row");
+      row.append(make("dt", "", item.label), make("dd", "", item.value));
+      personal.append(row);
+    });
+    if (!personal.children.length) emptyState(personal, "Add the personal details you would like to share in data.js.");
+  }
 
   const family = byId("family-list");
-  data.family.forEach((person) => {
-    const row = make("div", "family-item");
-    row.append(make("span", "family-role", person.role), make("span", "family-name", person.name));
-    family.append(row);
-  });
-  if (!family.children.length) emptyState(family, "Family details are optional. Add only what you are comfortable sharing.");
+  if (family) {
+    data.family.forEach((person) => {
+      const row = make("div", "family-item");
+      row.append(make("span", "family-role", person.role), make("span", "family-name", person.name));
+      family.append(row);
+    });
+    if (!family.children.length) emptyState(family, "Family details are optional. Add only what you are comfortable sharing.");
+  }
 }
 
 function renderCareer() {

@@ -1,14 +1,14 @@
 // Edit these values to personalize the site. Empty lists keep the page free of invented details.
 const data = {
-  name: "Kumar Subrato",
+  name: "Subrato Kumar",
   tagline: "Personal profile",
-  title: "Your professional title",
-  introduction: "A little about me, my work, and the things I care about. This space is ready for your introduction.",
-  location: "",
+  title: "Agentic AI Developer",
+  introduction: "I’m a curious, ambitious, and technology-driven person who enjoys learning, exploring new ideas, and building meaningful things. I value continuous growth, creativity, and staying connected with the people and things that matter to me. Along with my passion for technology and AI, I enjoy travelling, exploring new experiences, and maintaining a balance between professional goals and personal life.",
+  location: "Jamshedpur,Jharkhand",
   portraitCaption: "A little more about me",
-  photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=82",
+  photo: "assets/subrato_portfolio.png",
   personal: [
-    { label: "Full name", value: "Kumar Subrato" },
+    { label: "Full name", value: "Subrato Kumar" },
     { label: "Location", value: "" },
     { label: "Current city", value: "" },
     { label: "Education", value: "" },
