@@ -7,6 +7,12 @@ const data = {
   location: "Jamshedpur,Jharkhand",
   portraitCaption: "A little more about me",
   photo: "assets/subrato_portfolio.png",
+  // Add local photos from assets/ here to show them beneath the profile portrait.
+  portraitGallery: [
+    { src: "assets/pic-1.jpg", alt: "Additional portrait photo 1" },
+    { src: "assets/pic-2.jpg", alt: "Additional portrait photo 2" },
+    { src: "assets/pic-3.jpg", alt: "Additional portrait photo 3" }
+  ],
   personal: [
     { label: "Full name", value: "Subrato Kumar" },
     { label: "Location", value: "" },
@@ -26,7 +32,28 @@ const data = {
   },
   skills: [],
   projects: [],
-  hobbies: [],
+  hobbies: [
+    {
+      title: "Curious by Nature",
+      description: "Always exploring new ideas, technologies, and perspectives that make me think differently."
+    },
+    {
+      title: "Build & Experiment",
+      description: "I enjoy turning ideas into working projects and learning through hands-on experimentation."
+    },
+    {
+      title: "Travel & Discover",
+      description: "Exploring new places, meeting people, and collecting experiences beyond the usual routine."
+    },
+    {
+      title: "Stay Active",
+      description: "Making time for fitness, outdoor activities, and maintaining a healthy balance in life."
+    },
+    {
+      title: "Problem Solving",
+      description: "I naturally enjoy figuring out how things work and finding simpler ways to solve challenging problems."
+    }
+  ],
   social: [],
   contact: {
     email: "",
@@ -38,7 +65,14 @@ const data = {
   // These are sample photos only. Replace with your own image URLs or files when ready.
   gallery: [
     { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=78", alt: "Open landscape at sunset", caption: "Travel" },
-    { src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=78", alt: "Portrait in natural light", caption: "Portrait" },
+    {
+      caption: "Portrait",
+      images: [
+        { src: "assets/pic-1.jpg", alt: "Portrait of Subrato Kumar, photo 1" },
+        { src: "assets/pic-2.jpg", alt: "Portrait of Subrato Kumar, photo 2" },
+        { src: "assets/pic-3.jpg", alt: "Portrait of Subrato Kumar, photo 3" }
+      ]
+    },
     { src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1100&q=78", alt: "Mountain lake and forest", caption: "A quiet place" },
     { src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=78", alt: "Hills beneath a wide sky", caption: "Outdoors" },
     { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=78", alt: "Mountain range reflected in a lake", caption: "On the road" },

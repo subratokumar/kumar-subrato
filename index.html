@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f8f5">
+  <meta name="theme-color" content="#f3f6f2">
   <meta name="description" content="Personal profile and professional portfolio of Subrato Kumar.">
   <title>Subrato Kumar | Personal Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="data.js?v=20260929" defer></script>
+  <script src="data.js?v=20260929-portrait-gallery" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -28,7 +28,6 @@
         <a href="#personal">Personal</a>
         <a href="#family">Family</a>
         <a href="#career">Career</a>
-        <a href="#achievements">Achievements</a>
         <a href="#professional">Professional</a>
         <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
@@ -46,8 +45,11 @@
         <div class="profile-links" id="social-links" aria-label="Social links"></div>
       </div>
       <figure class="profile-portrait">
-        <img id="profile-photo" src="assets/subrato_portfolio.png" alt="Profile photo placeholder" fetchpriority="high">
-        <figcaption id="portrait-caption">A little more about me</figcaption>
+        <div class="portrait-feature">
+          <img id="profile-photo" src="assets/subrato_portfolio.png" alt="Portrait of Subrato Kumar" fetchpriority="high">
+          <figcaption id="portrait-caption">A little more about me</figcaption>
+        </div>
+        <div class="portrait-gallery" id="portrait-gallery" aria-label="Additional portrait photos" hidden></div>
       </figure>
     </section>
 
@@ -161,113 +163,90 @@
         <p class="eyebrow">How my work has grown</p>
         <h2>Career journey</h2>
       </div>
-      <div class="education-details">
-
-  <div class="education-card">
-    <span>B.Tech (Computer Science and Technology) 2019</span>
-    <h3>Dr. B. C. Roy Engineering College, Durgapur</h3>
-  </div>
-
-  <div class="education-card">
-    <span>M.Tech (Computer Science and Technology) 2023</span>
-    <h3>BIT, Mesra</h3>
-  </div>
-
-</div>
-      <!-- <div class="timeline" id="career-timeline"></div> -->
-    </section>
-
-    <section class="content-section section-wrap" id="achievements">
-      <div class="section-heading">
-        <p class="eyebrow">Milestones worth remembering</p>
-        <h2>Achievements</h2>
+      <div class="timeline education-timeline" aria-label="Education milestones">
+        <article class="timeline-item">
+          <span class="timeline-date">2019</span>
+          <div>
+            <div class="timeline-role">B.Tech (Computer Science and Technology)</div>
+            <div class="timeline-org">Dr. B. C. Roy Engineering College, Durgapur</div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-date">2023</span>
+          <div>
+            <div class="timeline-role">M.Tech (Computer Science and Technology)</div>
+            <div class="timeline-org">BIT, Mesra</div>
+          </div>
+        </article>
       </div>
-      <div class="achievement-list" id="achievement-list"></div>
     </section>
 
     <section class="content-section section-wrap" id="professional">
-  <div class="section-heading">
-    <p class="eyebrow">What I do and how I do it</p>
-    <h2>Professional profile</h2>
-  </div>
-
-  <div class="professional-summary">
-    <p>
-      I work as a <strong>Technical Lead and Agentic AI Developer</strong>,
-      building AI-powered applications, data engineering solutions, and
-      intelligent automation using modern technologies.
-    </p>
-  </div>
-
-  <div class="subsection">
-    <h3>Areas of expertise</h3>
-
-    <div class="skill-groups">
-      <div class="skill-group">
-        <h4>AI &amp; LLM</h4>
-        <p>Agentic AI, LLMs, RAG, LangChain, LangGraph, AI Agents</p>
+      <div class="section-heading">
+        <p class="eyebrow">What I do and how I do it</p>
+        <h2>Professional profile</h2>
       </div>
 
-      <div class="skill-group">
-        <h4>Data &amp; Backend</h4>
-        <p>Python, PySpark, Databricks, Data Engineering, REST APIs</p>
+      <div class="subsection">
+        <div class="subsection-heading">
+          <h3>HCLTech</h3>
+          <span class="summary-label">Technical Lead · July 2023 – Present</span>
+        </div>
+        <div class="project-list">
+          <article class="project-item">
+            <div>
+              <div class="project-title">Propel Data Accelerator (Research &amp; Development)</div>
+              <p class="project-description">
+                Built an AI-powered data engineering platform that uses agentic LLM
+                workflows to generate, validate, test, debug, and refine PySpark
+                pipelines.
+              </p>
+              <p class="project-description">
+                Integrated React, Python, Databricks, SonarQube, AI-generated testing,
+                code execution, workflow management, and self-healing capabilities.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-item">
+            <div>
+              <div class="project-title">BigFix Project</div>
+              <p class="project-description">
+                Developed hardware profiling and system compatibility solutions using
+                Go, extracting CPU, memory, disk, and endpoint information for
+                targeted deployments, compliance, and reporting.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-item">
+            <div>
+              <div class="project-title">Dynamic Center Energy Saving(Research & Development)</div>
+              <p class="project-description">
+                Developed responsive web applications using Angular, HTML5, CSS3,
+                and Node.js, including interactive reporting interfaces and REST API
+                integration.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-item">
+            <div>
+              <div class="project-title">Google SecOps SOAR (Present Working as a Data scientist for GOOGLE)</div>
+              <p class="project-description">
+                Working on integrating agentic AI capabilities into Google SecOps SOAR
+                to enhance security operations through intelligent automation,
+                workflow orchestration, and AI-assisted decision making.
+              </p>
+              <p class="project-description">
+                Exploring AI agents, tool integration, and automated workflows to
+                streamline security investigation and response processes.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
-
-      <div class="skill-group">
-        <h4>Frontend</h4>
-        <p>React, Angular, HTML5, CSS3, JavaScript</p>
-      </div>
-
-      <div class="skill-group">
-        <h4>AI Engineering</h4>
-        <p>Code Generation, AI Testing, SonarQube, Workflow Automation</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="subsection">
-    <div class="subsection-heading">
-      <h3>Selected projects</h3>
-      <span class="muted-label">A selection of my work</span>
-    </div>
-
-    <div class="project-list">
-
-      <div class="project-card">
-        <span class="project-meta">HCLTech · Technical Lead · July 2023 – Present</span>
-        <h4>Propel Data Accelerator</h4>
-        <p>
-          Built an AI-powered data engineering platform that uses agentic LLM
-          workflows to generate, validate, test, debug, and refine PySpark
-          pipelines.
-        </p>
-        <p>
-          Integrated React, Python, Databricks, SonarQube, AI-generated testing,
-          code execution, workflow management, and self-healing capabilities.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h4>BigFix Project</h4>
-        <p>
-          Developed hardware profiling and system compatibility solutions using
-          Go, extracting CPU, memory, disk, and endpoint information for
-          targeted deployments, compliance, and reporting.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h4>Dynamic Center Energy Saving</h4>
-        <p>
-          Developed responsive web applications using Angular, HTML5, CSS3,
-          and Node.js, including interactive reporting interfaces and REST API
-          integration.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="content-section section-wrap" id="hobbies">
       <div class="section-heading">

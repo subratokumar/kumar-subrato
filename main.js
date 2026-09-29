@@ -45,16 +45,18 @@ function renderCareer() {
   }
 
   const achievements = byId("achievement-list");
-  data.achievements.forEach((item, index) => {
-    const entry = make("article", "achievement-item");
-    const copy = make("div");
-    copy.append(make("div", "achievement-title", item.title));
-    if (item.organization || item.year) copy.append(make("p", "achievement-meta", [item.organization, item.year].filter(Boolean).join(" · ")));
-    if (item.description) copy.append(make("p", "achievement-description", item.description));
-    entry.append(make("span", "achievement-mark", String(index + 1).padStart(2, "0")), copy);
-    achievements.append(entry);
-  });
-  if (!achievements.children.length) emptyState(achievements, "Certifications, awards, and milestones can be added to data.js.");
+  if (achievements) {
+    data.achievements.forEach((item, index) => {
+      const entry = make("article", "achievement-item");
+      const copy = make("div");
+      copy.append(make("div", "achievement-title", item.title));
+      if (item.organization || item.year) copy.append(make("p", "achievement-meta", [item.organization, item.year].filter(Boolean).join(" · ")));
+      if (item.description) copy.append(make("p", "achievement-description", item.description));
+      entry.append(make("span", "achievement-mark", String(index + 1).padStart(2, "0")), copy);
+      achievements.append(entry);
+    });
+    if (!achievements.children.length) emptyState(achievements, "Certifications, awards, and milestones can be added to data.js.");
+  }
 }
 
 function renderProfessional() {
@@ -148,33 +150,64 @@ function renderSocialAndContact() {
 
 function renderHobbies() {
   const list = byId("hobby-list");
-  data.hobbies.forEach((hobby) => list.append(make("li", "", hobby)));
+  data.hobbies.forEach((hobby) => {
+    const item = make("li", "hobby-item");
+    item.append(make("h3", "hobby-title", hobby.title), make("p", "hobby-description", hobby.description));
+    list.append(item);
+  });
   if (!list.children.length) emptyState(list, "Add a few hobbies or interests in data.js to make this profile more personal.");
 }
 
 function renderGallery() {
   const grid = byId("gallery-grid");
   const dialog = byId("lightbox");
+  const galleryPhotos = data.gallery.flatMap((photo) => photo.images
+    ? photo.images.map((image, index) => ({
+      ...image,
+      caption: `${photo.caption} · ${index + 1} of ${photo.images.length}`
+    }))
+    : [photo]);
+  const galleryStarts = [];
   let activeIndex = 0;
+  let photoOffset = 0;
 
   data.gallery.forEach((photo, index) => {
     const button = make("button", "gallery-tile");
     button.type = "button";
-    button.setAttribute("aria-label", "View photo: " + photo.caption);
-    const image = make("img");
-    image.src = photo.src;
-    image.alt = photo.alt;
-    image.loading = "lazy";
-    image.decoding = "async";
-    button.append(image, make("span", "", photo.caption));
-    button.addEventListener("click", () => openAt(index));
+    const photos = photo.images || [photo];
+    galleryStarts[index] = photoOffset;
+    photoOffset += photos.length;
+    button.setAttribute("aria-label", photo.images
+      ? `View ${photo.caption} photo set, ${photo.images.length} photos`
+      : "View photo: " + photo.caption);
+
+    if (photo.images) {
+      const preview = make("div", "gallery-portrait-preview");
+      photo.images.forEach((portrait) => {
+        const image = make("img");
+        image.src = portrait.src;
+        image.alt = "";
+        image.loading = "eager";
+        image.decoding = "async";
+        preview.append(image);
+      });
+      button.append(preview, make("span", "", `${photo.caption} · ${photo.images.length} photos`));
+    } else {
+      const image = make("img");
+      image.src = photo.src;
+      image.alt = photo.alt;
+      image.loading = "lazy";
+      image.decoding = "async";
+      button.append(image, make("span", "", photo.caption));
+    }
+    button.addEventListener("click", () => openAt(galleryStarts[index]));
     grid.append(button);
   });
   if (!data.gallery.length) emptyState(grid, "Add personal, family, travel, or professional photos in data.js.");
 
   function openAt(index) {
-    activeIndex = (index + data.gallery.length) % data.gallery.length;
-    const photo = data.gallery[activeIndex];
+    activeIndex = (index + galleryPhotos.length) % galleryPhotos.length;
+    const photo = galleryPhotos[activeIndex];
     byId("lightbox-image").src = photo.src;
     byId("lightbox-image").alt = photo.alt;
     byId("lightbox-caption").textContent = photo.caption;
