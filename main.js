@@ -32,15 +32,17 @@ function renderDetails() {
 
 function renderCareer() {
   const timeline = byId("career-timeline");
-  data.career.forEach((item) => {
-    const entry = make("article", "timeline-item");
-    const copy = make("div");
-    copy.append(make("div", "timeline-role", item.role), make("div", "timeline-org", item.organization));
-    if (item.description) copy.append(make("p", "timeline-description", item.description));
-    entry.append(make("div", "timeline-date", item.duration), copy);
-    timeline.append(entry);
-  });
-  if (!timeline.children.length) emptyState(timeline, "Add roles, organizations, and career milestones in data.js when you are ready.");
+  if (timeline) {
+    data.career.forEach((item) => {
+      const entry = make("article", "timeline-item");
+      const copy = make("div");
+      copy.append(make("div", "timeline-role", item.role), make("div", "timeline-org", item.organization));
+      if (item.description) copy.append(make("p", "timeline-description", item.description));
+      entry.append(make("div", "timeline-date", item.duration), copy);
+      timeline.append(entry);
+    });
+    if (!timeline.children.length) emptyState(timeline, "Add roles, organizations, and career milestones in data.js when you are ready.");
+  }
 
   const achievements = byId("achievement-list");
   data.achievements.forEach((item, index) => {
@@ -57,52 +59,58 @@ function renderCareer() {
 
 function renderProfessional() {
   const summary = byId("professional-summary");
-  [
-    ["Current designation", data.professional.designation],
-    ["Organization", data.professional.organization],
-    ["Experience", data.professional.experience],
-    ["Future direction", data.professional.futureDirection]
-  ].forEach(([label, value]) => {
-    const item = make("div", "summary-item");
-    item.append(make("span", "summary-label", label), make("span", "summary-value", value || "Add in data.js"));
-    summary.append(item);
-  });
-  if (data.professional.expertise) {
-    const expertise = make("p", "empty-note", data.professional.expertise);
-    summary.after(expertise);
+  if (summary) {
+    [
+      ["Current designation", data.professional.designation],
+      ["Organization", data.professional.organization],
+      ["Experience", data.professional.experience],
+      ["Future direction", data.professional.futureDirection]
+    ].forEach(([label, value]) => {
+      const item = make("div", "summary-item");
+      item.append(make("span", "summary-label", label), make("span", "summary-value", value || "Add in data.js"));
+      summary.append(item);
+    });
+    if (data.professional.expertise) {
+      const expertise = make("p", "empty-note", data.professional.expertise);
+      summary.after(expertise);
+    }
   }
 
   const groups = byId("skill-groups");
-  data.skills.forEach((group) => {
-    const section = make("div", "skill-group");
-    section.append(make("h4", "", group.category));
-    const tags = make("div", "skill-tags");
-    group.items.forEach((skill) => tags.append(make("span", "skill-tag", skill)));
-    section.append(tags);
-    groups.append(section);
-  });
-  if (!groups.children.length) emptyState(groups, "Add your technical and professional skills in data.js.");
+  if (groups) {
+    data.skills.forEach((group) => {
+      const section = make("div", "skill-group");
+      section.append(make("h4", "", group.category));
+      const tags = make("div", "skill-tags");
+      group.items.forEach((skill) => tags.append(make("span", "skill-tag", skill)));
+      section.append(tags);
+      groups.append(section);
+    });
+    if (!groups.children.length) emptyState(groups, "Add your technical and professional skills in data.js.");
+  }
 
   const projects = byId("project-list");
-  data.projects.forEach((project) => {
-    const item = make("article", "project-item");
-    const copy = make("div");
-    copy.append(make("div", "project-title", project.name));
-    if (project.description) copy.append(make("p", "project-description", project.description));
-    if (project.technologies?.length) copy.append(make("div", "project-tools", project.technologies.join(" · ")));
-    const links = make("div", "project-links");
-    [["GitHub", project.github], ["Live", project.demo]].forEach(([label, href]) => {
-      if (!href) return;
-      const link = make("a", "", label + " ↗");
-      link.href = href;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      links.append(link);
+  if (projects) {
+    data.projects.forEach((project) => {
+      const item = make("article", "project-item");
+      const copy = make("div");
+      copy.append(make("div", "project-title", project.name));
+      if (project.description) copy.append(make("p", "project-description", project.description));
+      if (project.technologies?.length) copy.append(make("div", "project-tools", project.technologies.join(" · ")));
+      const links = make("div", "project-links");
+      [["GitHub", project.github], ["Live", project.demo]].forEach(([label, href]) => {
+        if (!href) return;
+        const link = make("a", "", label + " ↗");
+        link.href = href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        links.append(link);
+      });
+      item.append(copy, links);
+      projects.append(item);
     });
-    item.append(copy, links);
-    projects.append(item);
-  });
-  if (!projects.children.length) emptyState(projects, "Your projects will appear here once you add them to data.js. No sample projects are included.");
+    if (!projects.children.length) emptyState(projects, "Your projects will appear here once you add them to data.js. No sample projects are included.");
+  }
 }
 
 function renderSocialAndContact() {
